@@ -1,8 +1,9 @@
+%{?_javapackages_macros:%_javapackages_macros}
 %global artifactId javax.servlet-api
 
 Name:           glassfish-servlet-api
 Version:        3.1.0
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Java Servlet API
 License:        (CDDL or GPLv2 with exceptions) and ASL 2.0
 URL:            http://servlet-spec.java.net
@@ -41,6 +42,7 @@ cp -p src/main/resources/META-INF/README .
 
 %build
 %mvn_alias : javax.servlet:servlet-api
+%mvn_alias : org.apache.geronimo.specs:geronimo-servlet_3.0_spec
 %mvn_build
 
 %install
@@ -53,6 +55,9 @@ cp -p src/main/resources/META-INF/README .
 %doc LICENSE-2.0.txt README
 
 %changelog
+* Mon Aug 4 2014 Mikolaj Izdebski <mizdebsk@redhat.com> - 3.1.0-6
+- Add alias for Geronimo servlet API
+
 * Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3.1.0-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
