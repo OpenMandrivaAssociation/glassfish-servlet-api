@@ -6,7 +6,7 @@ Version:        3.1.0
 Release:        6%{?dist}
 Summary:        Java Servlet API
 License:        (CDDL or GPLv2 with exceptions) and ASL 2.0
-URL:            http://servlet-spec.java.net
+URL:            https://servlet-spec.java.net
 # svn export https://svn.java.net/svn/glassfish~svn/tags/javax.servlet-api-3.1.0 javax.servlet-api-3.1.0
 # tar cvJf javax.servlet-api-3.1.0.tar.xz javax.servlet-api-3.1.0/
 Source0:        %{artifactId}-%{version}.tar.xz
